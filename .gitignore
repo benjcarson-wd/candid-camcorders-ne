@@ -1,3 +1,4 @@
 node_modules/
 vendor/
 /theme/assets/dist
+acf-json

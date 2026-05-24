@@ -1,8 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Italianno&family=Lora:ital,wght@0,400..700;1,400..700&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap");
 @import 'tailwindcss';
 @import './theme.css';
 
 @plugin '@tailwindcss/typography';
 
+@theme {
+    --color-brand-cream-white: #fef8f7;
+    --color-brand-green: #708f73;
+    --color-brand-off-black: #383637;
+    --font-logo: 'Italianno', cursive;
+    --font-heading: 'Lora', serif;
+    --font-body: 'Noto Serif', serif;
+    --text-s: clamp(1.3rem, 2.5vw, 1.6rem);
+    --text-m: clamp(1.6rem, 3vw, 2rem);
+    --text-l: clamp(2rem, 3.5vw, 2.2rem);
+    --text-xl: clamp(2.4rem, 4vw, 2.8rem);
+    --text-2xl: clamp(2.8rem, 4.5vw, 3.6rem);
+}
+
+@utility page-width {
+    max-width: var(--page-width, 1500px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
 body.admin-bar {
     max-height: calc(100vh - 32px);
+}
+
+body {
+    @apply font-light bg-brand-cream-white text-brand-off-black font-body;
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .wp-block-heading {
+    @apply font-heading;
+}
+
+h1.wp-block-heading {
+    @apply text-2xl;
+}
+
+h2.wp-block-heading {
+    @apply text-xl;
+}
+
+h3.wp-block-heading {
+    @apply text-l;
+}
+
+h4.wp-block-heading {
+    @apply text-m;
+}
+
+h5.wp-block-heading {
+    @apply text-s;
 }

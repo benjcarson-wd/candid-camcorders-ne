@@ -6,6 +6,9 @@
     <link rel="pingback" href="{{ site.pingback_url }}" />
     <style>
         [x-cloak] { display: none; }
+        :root { 
+            --page-width: {{ page_width }}px; 
+        }
     </style>
     {{function('wp_head')}}
 </head>
